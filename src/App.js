@@ -62,7 +62,10 @@ export default function App() {
   }
 
   return (
-    <div className="app">
+    <>
+    <div className="flex flex-col items-center justify-center"><h1 className=" font-semibold text-7xl mt-20  mb-20 tracking-widest ">Split App</h1>
+    <p className=" mb-20 text-3xl font-semibold max-md:text-center ">In this app, you can track the bills that you pay, and your friend should pay you back, or the opposite.</p></div>
+    <div className="grid md:grid-cols-2 md:gap-x-5">
       <div className="sidebar">
         <FriendsList
           friends={friends}
@@ -85,6 +88,7 @@ export default function App() {
         />
       )}
     </div>
+    </>
   );
 }
 
@@ -121,7 +125,7 @@ function Friend({ friend, onSelection, selectedFriend }) {
           {friend.name} owes you {Math.abs(friend.balance)}€
         </p>
       )}
-      {friend.balance === 0 && <p>You and {friend.name} are even</p>}
+      {friend.balance === 0 && <p >You and {friend.name} are even</p>}
 
       <Button onClick={() => onSelection(friend)}>
         {isSelected ? "Close" : "Select"}
