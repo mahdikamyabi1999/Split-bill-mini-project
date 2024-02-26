@@ -63,9 +63,9 @@ export default function App() {
 
   return (
     <>
-    <div className="flex flex-col items-center justify-center"><h1 className=" font-semibold text-7xl mt-20  mb-20 tracking-widest ">Split App</h1>
-    <p className=" mb-20 text-3xl font-semibold max-md:text-center ">In this app, you can track the bills that you pay, and your friend should pay you back, or the opposite.</p></div>
-    <div className="grid md:grid-cols-2 md:gap-x-5">
+    <div className="flex flex-col items-center justify-center "><h1 className=" font-semibold text-7xl mt-20  mb-20 tracking-widest text-white ">Split App</h1>
+    <p className=" mb-20 max-md:px-8 text-3xl font-semibold max-md:text-center text-white ">In this app, you can track the bills that you pay, and your friend should pay you back, or the opposite.</p></div>
+    <div className="grid md:grid-cols-2 md:gap-x-5 bg-white h-[700px] p-6 rounded-[40px] md:h-[500px]">
       <div className="sidebar">
         <FriendsList
           friends={friends}
@@ -143,7 +143,7 @@ function FormAddFriend({ onAddFriend }) {
 
     if (!name || !image) return;
 
-    const id = crypto.randomUUID();
+    const id = crypto.randomUUID;
     const newFriend = {
       id,
       name,
