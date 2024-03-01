@@ -12,7 +12,7 @@
 
 ###
 
-<p align="left">web app for splitting expenses spent with React</h3>
+<h3 align="left">web app for splitting expenses spent with React</h3>
 
 ###
 
